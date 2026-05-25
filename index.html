@@ -102,7 +102,7 @@
     <script>
       function toggleMenu() { const m=document.getElementById('hamburgerMenu'); m.style.display=m.style.display==='none'?'block':'none'; }
       document.addEventListener('click',function(e){ const btn=document.getElementById('hamburgerBtn'); if(btn&&!btn.contains(e.target)) document.getElementById('hamburgerMenu').style.display='none'; });
-      function loginWithDiscord(){ const CLIENT_ID='1501765131749687316'; const REDIRECT_URI=encodeURIComponent('https://evgmercader.github.io/booga/booga.html'); const SCOPE='identify'; window.location.href=`https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPE}`; }
+      function loginWithDiscord(){ const CLIENT_ID='1501765131749687316'; const REDIRECT_URI=encodeURIComponent('https://evgmercader.github.io/booga-tournament/'); const SCOPE='identify'; window.location.href=`https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&scope=${SCOPE}`; }
       function applyUserUI(user){ const avatarURL=user.avatar?`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=128`:`https://cdn.discordapp.com/embed/avatars/0.png`; document.getElementById('userAvatar').src=avatarURL; document.getElementById('userName').textContent=user.username; document.getElementById('userSection').style.display='flex'; document.getElementById('loginBtn').style.display='none'; document.getElementById('menuLoginRow').style.display='none'; }
       (function(){
         (function(){ const saved=localStorage.getItem('booga_bg_url')||localStorage.getItem('booga_bg'); if(saved&&saved!=='original'){ const bgImg=document.querySelector('.video-bg img'); if(bgImg) bgImg.src=saved; } })();
